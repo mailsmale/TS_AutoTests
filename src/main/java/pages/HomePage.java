@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 /**
  * Created by odiachuk on 07.07.17.
  */
-public class HomePage extends BasePage{
+public class HomePage extends BasePage {
 
     private static HomePage instance;
     public static HomePage Instance = (instance != null) ? instance : new HomePage();

@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /*
  * Created by odiachuk on 12.07.17.
@@ -28,6 +27,7 @@ public class PageHeader extends BasePage {
     //top menu
     By topMenuItem_Shop = By.xpath("//ul[@role='menu']//a[@role='menuitem']//span[text()='Shop']");
     By topMenuItem_Sleep = By.xpath("//ul[@role='menu']//a[@role='menuitem']//span[text()='Sleep']");
+    By topMenuItem_Magazine = By.xpath("//ul[@role='menu']//a[@role='menuitem']//span[text()='Magazine']");
 
 
     By topMenuItem_SignIn = By.xpath("//ul[@class='header links']//a[contains(text(),'Sign In')]");
@@ -62,6 +62,12 @@ public class PageHeader extends BasePage {
         reporter.info("Click on SIGN IN menu item");
         clickOnElement(topMenuItem_SignIn);
         return LoginPage.Instance;
+    }
+
+    public MagazineMainPage clickMagazineItem(){
+        reporter.info("Click on Magazine menu item");
+        clickOnElement(topMenuItem_Magazine);
+        return MagazineMainPage.Instance;
     }
 
 

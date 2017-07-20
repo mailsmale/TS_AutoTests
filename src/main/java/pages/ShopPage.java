@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 /**
  * Created by odiachuk on 07.07.17.
  */
-public class ShopPage extends BasePage{
+public class ShopPage extends BasePage {
 
     private static ShopPage instance;
     public static ShopPage Instance = (instance != null) ? instance : new ShopPage();
