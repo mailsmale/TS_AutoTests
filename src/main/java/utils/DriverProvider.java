@@ -51,7 +51,10 @@ public class DriverProvider {
         ChromeOptions chromeOptions = new ChromeOptions();
         //chromeOptions.addArguments("--kiosk");
         //chromeOptions.addArguments("--start-maximized");
+        if (!OS_EXTENTION.toLowerCase().contains("win")) {
+            chromeOptions.addArguments("window-size=1920,1080");
 
+        }
         caps.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
 
         return new ChromeDriver(caps);
