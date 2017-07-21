@@ -29,7 +29,7 @@ public class PageHeader extends BasePage {
     By topMenuItem_Sleep = By.xpath("//ul[@role='menu']//a[@role='menuitem']//span[text()='Sleep']");
     By topMenuItem_Magazine = By.xpath("//ul[@role='menu']//a[@role='menuitem']//span[text()='Magazine']");
 
-
+    By topMenuItem_FAQ = By.xpath(".//*[@class='help-number-wrapper']//a[contains(text(),' HELP')]");
     By topMenuItem_SignIn = By.xpath("//ul[@class='header links']//a[contains(text(),'Sign In')]");
 
     //cart
@@ -70,6 +70,11 @@ public class PageHeader extends BasePage {
         return MagazineMainPage.Instance;
     }
 
+    public FaqPage clickFaqMenuItem(){
+        reporter.info("Click on Help menu item");
+        clickOnElement(topMenuItem_FAQ);
+        return FaqPage.Instance;
+    }
 
     /** Cart Methods */
 
